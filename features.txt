@@ -1,0 +1,90 @@
+Ý nghĩa các thuộc tính:
+
+1. Incident Datetime: Thời gian diễn ra sự cố (đầy đủ ngày tháng năm và giờ)
+
+2. Incident Date: Ngày, tháng, năm diễn ra sự cố
+
+3. Incident Time: giờ diễn ra sự cố
+
+4. Incident Year: Năm diễn ra sự cố
+
+5. Incident Day of Week: Ngày trong tuần
+
+6. Report Datetime: Thời gian trình báo sự cố(ngày, tháng, năm và giờ)
+
+7. Row ID: Giá trị định danh duy nhất cho mỗi dòng dữ liệu
+
+8. Incident ID: 
+    - Đây là mã định danh do hệ thống tạo ra cho các báo cáo sự cố (Incident report). 
+    - Incident IDs và Incident Numbers đều xác định duy nhất các báo cáo, nhưng Incident Numbers được sử dụng cho các trường hợp tham khảo và tài liệu báo cáo.   
+   
+9. Incident Number: 
+    - Số được cấp trên báo cáo, đôi khi được gọi là Case Number. 
+    - Số này được sử dụng cho các trường hợp tham khảo và tài liệu báo cáo.
+
+10. CAD Number: 
+    - CAD là hệ thống được sử dụng bởi bộ phần Quản lý khẩn cấp (DEM) để điều động các sĩ quan. 
+    - CAD Number được phân bố bởi hệ thống DEM và được liên kết với các báo cáo sự cố (Incident Number) thích hợp. Không phải tất các các sự cố đề có CAD Number. 
+    - Nó được lưu trữ online thông qua Coplogic và các sự cố không được lưu trữ trên hệ thống DEM sẽ không có CAD Number.    
+    
+11. Report Type Code: Mã hệ thống cho các loại báo cáo, chúng có mô tả tương ứng trong dataset.
+
+12. Report Type Description: Phần mô tả về loại báo cáo, có thể là một trong các thành phần sau: 
+    - Initial
+    - Initial Supplement
+    - Vehicle Initial
+    - Vehicle Supplement
+    - Coplogic Initial
+    - Coplogic Supplement
+
+13. Filed Online: 
+    - Các báo cáo thể được lưu trữ online bởi các thành viên của cộng đồng sử dụng hệ thống báo cáo SFPD’s self-service được gọi là Coplogic Values, giá trị "TRUE" nếu Coplogic được sử dụng để lưu trữ báo cáo. 
+    - Tham khảo link để biết thêm thông tin: (http://sanfranciscopolice.org/reports).   
+    
+14. Incident Code: là các mã hệ thống mô tả loại sự cố. Một sự cố có thể thuộc một hoặc nhiều loại liên quan, trong trường hợp này sẽ có nhiều dòng có cùng Incident ID và Incident Code.
+
+15. Incident Category: loại sự cố(tên gọi cho các Incident Code) được sử dụng để thống kê và báo cáo, được cung cấp bởi Crime Analysis Unit of the Police Department.
+
+16. Incident Subcategory: vẫn là loại sự cố nhưng được chia nhỏ trường hợp hơn Incident Category.
+
+17. Incident Description: phần mô tả sự cố tương ứng với mỗi Incident Code, thông thường được tự hiểu.
+
+18. Resolution: 
+    - Trạng thái của sự cố tại thời điểm báo cáo, có thể là một trong các trạng thái sau: 
+        - Cite or Arrest Adult (Buộc tội hoặc bắt người (người lớn)) 
+        - Cite or Arrest Juvenile (Buộc tội hoặc bắt người (trẻ vị thành niên)) 
+        - Exceptional Adult (Trường hợp ngoại lệ (người lớn)) 
+        - Exceptional Juvenile (Trường hợp ngoại lệ (trẻ vị thành niên)) 
+        - Open or Active (Đang tiến hành) 
+        - Unfounded Note (Chưa có ghi chép)
+    - Một khi báo cáo được lưu, Resolution sẽ không thay đổi. Việc thay đổi hoặc cập nhật phải sử dụng một báo cáo bổ sung. 
+    - Các sự cố có liên quan đến trẻ vị thành niên không bao gồm trong bộ dữ liệu này. Xem phần Juvenile Data để biết thêm thông tin.
+      
+19. Intersection: 
+    - Gồm từ 2 tên đường trở lên, là nơi gần nhất đối với địa điểm xảy ra sự cố. Mỗi tên đường được phân cách bởi dấu (\). 
+    - Lưu ý rằng các Intersection trên phải thỏa mãn việc kiểm soát riêng tư(privacy controls).
+       
+20. CNN: 
+    - Viết tắt của Centerline Node Network, là định danh cho phần Intersection trong việc tham khảo trở lại các bộ dự liệu bản đồ cơ sở có liên quan. 
+    - Tham khảo tại: https://datasf.gitbook.io/draft-publishing-standards/standard-reference-data/basemap/street-centerlines-nodes.
+      
+21. Police District: 
+    - Địa chỉ của Police District nơi sự cố xảy ra. 
+    - Tham khảo tại: https://data.sfgov.org/d/wkhw-cjsf.    
+    
+22. Analysis Neighborhood: 
+    - Dùng để xác định vùng lân cận nơi sự cố xảy ra, được xác định bởi Department of Public Health and the Mayor's Office of Housing and Community Development. 
+    - Chú ý rằng khu vực này được phân dựa trên phần Intersection, có thể khác với địa điểm chính xác mà sự cố xảy ra.
+    - Tham khảo tại: https://data.sfgov.org/d/p5b7-5n3h. 
+  
+23. Supervisor District: 
+    - 11 thành viên được chọn cho ban giám sát ở San Francisco, mỗi người chịu tránh nhiệm cho một khu vực địa lý (district). 
+    - Ban giám sát này là thành phần lập pháp chính ở San Francisco. Các quận(district) được đánh số từ 1 đến 11. 
+    - Chú ý rằng khu vực này được phân dựa trên phần Intersection, có thể khác với địa điểm chính xác mà sự cố xảy ra.
+    - Tham khảo tại: https://data.sfgov.org/d/8nkz-x4ny. 
+    
+24. Latitude: vỹ độ.
+
+25. Longitude: Kinh độ.
+
+26. point: địa điểm, gồm cả kinh độ và vĩ độ.
