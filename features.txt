@@ -79,7 +79,7 @@
   
 23. Supervisor District: 
     - 11 thành viên được chọn cho ban giám sát ở San Francisco, mỗi người chịu tránh nhiệm cho một khu vực địa lý (district). 
-    - Ban giám sát này là thành phần lập pháp chính ở San Francisco. Các quận(district) được đánh số từ 1 đến 11. 
+    - Ban giám sát này là thành phần lập pháp chính ở San Francisco. Các quận (district) được đánh số từ 1 đến 11. 
     - Chú ý rằng khu vực này được phân dựa trên phần Intersection, có thể khác với địa điểm chính xác mà sự cố xảy ra.
     - Tham khảo tại: https://data.sfgov.org/d/8nkz-x4ny. 
     
