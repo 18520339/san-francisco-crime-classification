@@ -1,3 +1,4 @@
 *.csv
 *.zip
+pd_data
 .ipynb_checkpoints
