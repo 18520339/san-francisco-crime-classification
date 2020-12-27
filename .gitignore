@@ -1,4 +1,5 @@
 *.csv
 *.zip
-pd_data
+*.pkl
 .ipynb_checkpoints
+pd_data
